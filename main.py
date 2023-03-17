@@ -213,7 +213,7 @@ def get_weekday():
 def get_weather(city):
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
   res = requests.get(url).json()
-  weather = res['date']['list'][0]
+  weather = res['data']['list'][0]
   return weather['weather'], math.floor(weather['temp'])
 
 #计算在一起的日期
